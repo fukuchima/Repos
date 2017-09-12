@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c1="clr-namespace:C1.Xamarin.Forms.Grid;assembly=C1.Xamarin.Forms.Grid"
+             xmlns:c1input="clr-namespace:C1.Xamarin.Forms.Input;assembly=C1.Xamarin.Forms.Input"
+             xmlns:vm="clr-namespace:c1x_FlexGrid"
+             x:Class="c1x_FlexGrid.CustomerRequestView">
+    
+    <ContentPage.BindingContext>
+        <vm:CustomerRequestViewModel />
+    </ContentPage.BindingContext> 
+    
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand">
+            <c1:FlexGrid x:Name="flexgrid" ItemsSource="{Binding CustomerRequests}" HeadersVisibility="Column" AutoGenerateColumns="False" AutoSizeMode="Both">
+                <c1:FlexGrid.Columns>
+                    <c1:GridColumn Header="件名" Binding="Title" AllowResizing="True"/>
+                    <c1:GridColumn Header="受付日" Binding="OpenDate" Format="yyyy/MM/dd" />
+                    <c1:GridColumn Header="備考" Binding="Note"/>
+                </c1:FlexGrid.Columns>
+            </c1:FlexGrid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
