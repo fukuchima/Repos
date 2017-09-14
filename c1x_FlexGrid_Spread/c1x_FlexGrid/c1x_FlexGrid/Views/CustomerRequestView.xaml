@@ -12,11 +12,21 @@
     
     <ContentPage.Content>
         <Grid VerticalOptions="FillAndExpand">
-            <c1:FlexGrid x:Name="flexgrid" ItemsSource="{Binding CustomerRequests}" HeadersVisibility="Column" AutoGenerateColumns="False" AutoSizeMode="Both">
+            <c1:FlexGrid x:Name="flexgrid" 
+                         ItemsSource="{Binding CustomerRequests}" 
+                         HeadersVisibility="Column" 
+                         AutoGenerateColumns="False" 
+                         AutoSizeMode="Both" 
+                         HorizontalOptions="FillAndExpand">
                 <c1:FlexGrid.Columns>
-                    <c1:GridColumn Header="件名" Binding="Title" AllowResizing="True"/>
-                    <c1:GridColumn Header="受付日" Binding="OpenDate" Format="yyyy/MM/dd" />
-                    <c1:GridColumn Header="備考" Binding="Note"/>
+                    <c1:GridColumn Header="件名" Binding="Title" 
+                                   AllowResizing="True" 
+                                   Width="*"/>
+                    <c1:GridColumn Header="受付日" Binding="OpenDate" 
+                                   Format="yyyy/MM/dd" 
+                                   Width="0.5*"/>
+                    <c1:GridColumn Header="備考" Binding="Note" 
+                                   Width="Auto"/>
                 </c1:FlexGrid.Columns>
             </c1:FlexGrid>
 

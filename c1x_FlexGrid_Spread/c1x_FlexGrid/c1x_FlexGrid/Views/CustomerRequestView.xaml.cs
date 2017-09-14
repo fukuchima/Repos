@@ -15,7 +15,6 @@ namespace c1x_FlexGrid
         public CustomerRequestView()
         {
             InitializeComponent();
-            flexgrid.AutoSizeColumns(0, flexgrid.Columns.Count - 1);
         }
 
     }
